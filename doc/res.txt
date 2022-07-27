@@ -1,0 +1,1 @@
+https://websparrow.org/spring/spring-boot-calling-rest-services-with-resttemplate
