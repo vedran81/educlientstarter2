@@ -1,24 +1,28 @@
 package com.educlient.data.entity;
 
-import java.util.UUID;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
-import org.hibernate.annotations.Type;
+import javax.persistence.*;
 
 @MappedSuperclass
 public abstract class AbstractEntity {
 
     @Id
-    @GeneratedValue
-    @Type(type = "uuid-char")
-    private UUID id;
+        @SequenceGenerator(
+            name = "mentor_sequence",
+            sequenceName = "mentor_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "mentor_sequence"
+    )
+    @Column(nullable = false)
+    private Long id;
 
-    public UUID getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

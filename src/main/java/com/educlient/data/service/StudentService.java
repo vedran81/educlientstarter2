@@ -1,12 +1,12 @@
 package com.educlient.data.service;
 
 import com.educlient.data.entity.Student;
-import java.util.Optional;
-import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 @Service
 public class StudentService {
@@ -18,7 +18,7 @@ public class StudentService {
         this.repository = repository;
     }
 
-    public Optional<Student> get(UUID id) {
+    public Optional<Student> get(Long id) {
         return repository.findById(id);
     }
 
@@ -26,7 +26,7 @@ public class StudentService {
         return repository.save(entity);
     }
 
-    public void delete(UUID id) {
+    public void delete(Long id) {
         repository.deleteById(id);
     }
 

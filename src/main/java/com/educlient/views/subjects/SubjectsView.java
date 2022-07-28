@@ -23,10 +23,10 @@ import com.vaadin.flow.router.BeforeEnterObserver;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.spring.data.VaadinSpringDataHelpers;
-import java.util.Optional;
-import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
+
+import java.util.Optional;
 
 @PageTitle("Subjects")
 @Route(value = "Subject_list/:subjectID?/:action?(edit)", layout = MainLayout.class)
@@ -114,7 +114,7 @@ public class SubjectsView extends Div implements BeforeEnterObserver {
 
     @Override
     public void beforeEnter(BeforeEnterEvent event) {
-        Optional<UUID> subjectId = event.getRouteParameters().get(SUBJECT_ID).map(UUID::fromString);
+        Optional<Long> subjectId = event.getRouteParameters().get(SUBJECT_ID).map(Long::parseLong);
         if (subjectId.isPresent()) {
             Optional<Subject> subjectFromBackend = subjectService.get(subjectId.get());
             if (subjectFromBackend.isPresent()) {

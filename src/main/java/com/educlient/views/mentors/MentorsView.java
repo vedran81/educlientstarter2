@@ -22,10 +22,10 @@ import com.vaadin.flow.router.BeforeEnterObserver;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.spring.data.VaadinSpringDataHelpers;
-import java.util.Optional;
-import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
+
+import java.util.Optional;
 
 @PageTitle("Mentors")
 @Route(value = "mentor_list/:mentorID?/:action?(edit)", layout = MainLayout.class)
@@ -114,7 +114,7 @@ public class MentorsView extends Div implements BeforeEnterObserver {
 
     @Override
     public void beforeEnter(BeforeEnterEvent event) {
-        Optional<UUID> mentorId = event.getRouteParameters().get(MENTOR_ID).map(UUID::fromString);
+        Optional<Long> mentorId = event.getRouteParameters().get(MENTOR_ID).map(Long::parseLong);
         if (mentorId.isPresent()) {
             Optional<Mentor> mentorFromBackend = mentorService.get(mentorId.get());
             if (mentorFromBackend.isPresent()) {

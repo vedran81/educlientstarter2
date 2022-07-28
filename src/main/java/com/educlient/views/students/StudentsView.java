@@ -24,10 +24,10 @@ import com.vaadin.flow.router.BeforeEnterObserver;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.spring.data.VaadinSpringDataHelpers;
-import java.util.Optional;
-import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
+
+import java.util.Optional;
 
 @PageTitle("Students")
 @Route(value = "student_list/:studentID?/:action?(edit)", layout = MainLayout.class)
@@ -128,7 +128,7 @@ public class StudentsView extends Div implements BeforeEnterObserver {
 
     @Override
     public void beforeEnter(BeforeEnterEvent event) {
-        Optional<UUID> studentId = event.getRouteParameters().get(STUDENT_ID).map(UUID::fromString);
+        Optional<Long> studentId = event.getRouteParameters().get(STUDENT_ID).map(Long::parseLong);
         if (studentId.isPresent()) {
             Optional<Student> studentFromBackend = studentService.get(studentId.get());
             if (studentFromBackend.isPresent()) {
