@@ -58,10 +58,10 @@ public class MainLayout extends AppLayout {
         AppNav nav = new AppNav();
         nav.addClassNames("app-nav");
 
-        nav.addItem(new AppNavItem("About", AboutView.class, "la la-file"));
-        nav.addItem(new AppNavItem("Students", StudentsView.class, "la la-check"));
-        nav.addItem(new AppNavItem("Mentors", MentorsView.class, "la la-check"));
-        nav.addItem(new AppNavItem("Subjects", SubjectsView.class, "la la-check"));
+        nav.addItem(new AppNavItem("About", AboutView.class, "la la-globe"));
+        nav.addItem(new AppNavItem("Students", StudentsView.class, "la la-columns"));
+        nav.addItem(new AppNavItem("Mentors", MentorsView.class, "la la-columns"));
+        nav.addItem(new AppNavItem("Subjects", SubjectsView.class, "la la-columns"));
 
         return nav;
     }

@@ -145,6 +145,7 @@
     "workbox-webpack-plugin": "6.5.0"
   },
   "overrides": {
+    "chokidar": "$chokidar",
     "@vaadin/bundles": "$@vaadin/bundles",
     "@vaadin/accordion": "$@vaadin/accordion",
     "@vaadin/app-layout": "$@vaadin/app-layout",
@@ -255,13 +256,12 @@
     "@vaadin/vaadin-crud": "$@vaadin/vaadin-crud",
     "@vaadin/vaadin-grid-pro": "$@vaadin/vaadin-grid-pro",
     "@vaadin/vaadin-rich-text-editor": "$@vaadin/vaadin-rich-text-editor",
+    "@polymer/polymer": "$@polymer/polymer",
+    "lit": "$lit",
     "@vaadin/common-frontend": "$@vaadin/common-frontend",
     "construct-style-sheets-polyfill": "$construct-style-sheets-polyfill",
-    "lit": "$lit",
-    "@polymer/polymer": "$@polymer/polymer",
-    "chokidar": "$chokidar",
-    "date-fns": "$date-fns",
     "@vaadin-component-factory/vcf-nav": "$@vaadin-component-factory/vcf-nav",
+    "date-fns": "$date-fns",
     "line-awesome": "$line-awesome"
   },
   "vaadin": {

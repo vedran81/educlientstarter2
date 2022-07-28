@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <!-- Project from https://start.vaadin.com/project/6197144f-fc54-4a89-b917-7093e5470d81 -->
     <groupId>com.educlient</groupId>
@@ -10,6 +11,12 @@
     <packaging>jar</packaging>
 
     <properties>
+        <maven-resources-plugin.version>3.2.0</maven-resources-plugin.version>
+        <webdrivermanager.version>5.2.0</webdrivermanager.version>
+        <vaadin-testbench.version>23.1.0</vaadin-testbench.version>
+        <vaadin-spring-boot-starter.version>23.1.0</vaadin-spring-boot-starter.version>
+        <com.vaadin-vaadin.version>23.1.0</com.vaadin-vaadin.version>
+        <exampledata.version>5.0.1</exampledata.version>
         <java.version>17</java.version>
         <vaadin.version>23.1.2</vaadin.version>
         <selenium.version>4.1.2</selenium.version>
@@ -82,12 +89,12 @@
             <groupId>com.vaadin</groupId>
             <!-- Replace artifactId with vaadin-core to use only free components -->
             <artifactId>vaadin</artifactId>
-            <version>23.1.0</version>
+            <version>${com.vaadin-vaadin.version}</version>
         </dependency>
         <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-spring-boot-starter</artifactId>
-            <version>23.1.0</version>
+            <version>${vaadin-spring-boot-starter.version}</version>
         </dependency>
         <dependency>
             <groupId>org.mariadb.jdbc</groupId>
@@ -97,7 +104,7 @@
         <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>exampledata</artifactId>
-            <version>5.0.1</version>
+            <version>${exampledata.version}</version>
         </dependency>
 
         <dependency>
@@ -122,7 +129,7 @@
         <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-testbench</artifactId>
-            <version>23.1.0</version>
+            <version>${vaadin-testbench.version}</version>
         </dependency>
         <!-- Include JUnit 4 support for TestBench and others -->
         <dependency>
@@ -139,7 +146,7 @@
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>5.2.0</version>
+            <version>${webdrivermanager.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -247,7 +254,18 @@
                             <enableAssertions>true</enableAssertions>
                         </configuration>
                     </plugin>
+
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-resources-plugin</artifactId>
+                        <version>${maven-resources-plugin.version}</version>
+                        <configuration>
+                            <propertiesEncoding>${project.build.sourceEncoding}</propertiesEncoding>
+                        </configuration>
+                    </plugin>
                 </plugins>
+
+
             </build>
         </profile>
 
