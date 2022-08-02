@@ -5,19 +5,20 @@
     <modelVersion>4.0.0</modelVersion>
     <!-- Project from https://start.vaadin.com/project/6197144f-fc54-4a89-b917-7093e5470d81 -->
     <groupId>com.educlient</groupId>
-    <artifactId>educlientstarter</artifactId>
-    <name>EduClientStarter</name>
+    <artifactId>educlient</artifactId>
+    <name>EduClient</name>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <properties>
+        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <maven-resources-plugin.version>3.2.0</maven-resources-plugin.version>
         <webdrivermanager.version>5.2.0</webdrivermanager.version>
         <vaadin-testbench.version>23.1.0</vaadin-testbench.version>
         <vaadin-spring-boot-starter.version>23.1.0</vaadin-spring-boot-starter.version>
         <com.vaadin-vaadin.version>23.1.0</com.vaadin-vaadin.version>
         <exampledata.version>5.0.1</exampledata.version>
-        <java.version>17</java.version>
+<!--        <java.version>17</java.version>-->
         <vaadin.version>23.1.2</vaadin.version>
         <selenium.version>4.1.2</selenium.version>
     </properties>
@@ -149,6 +150,8 @@
             <version>${webdrivermanager.version}</version>
             <scope>test</scope>
         </dependency>
+
+
     </dependencies>
 
     <build>
@@ -215,6 +218,7 @@
         <profile>
             <id>it</id>
             <build>
+
                 <plugins>
                     <plugin>
                         <groupId>org.springframework.boot</groupId>
@@ -255,6 +259,16 @@
                         </configuration>
                     </plugin>
 
+                   <!-- <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <version>${maven-compiler-plugin.version}</version>
+                        <configuration>
+                            <source>17</source>
+                            <target>17</target>
+                        </configuration>
+                    </plugin>-->
+
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-resources-plugin</artifactId>
@@ -267,7 +281,12 @@
 
 
             </build>
+
+
         </profile>
 
     </profiles>
+
+
+
 </project>

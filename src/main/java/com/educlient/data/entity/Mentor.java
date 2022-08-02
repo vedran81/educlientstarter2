@@ -1,6 +1,6 @@
 package com.educlient.data.entity;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 @Entity
 public class Mentor extends AbstractEntity {

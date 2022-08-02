@@ -6,14 +6,14 @@ import javax.persistence.*;
 public abstract class AbstractEntity {
 
     @Id
-        @SequenceGenerator(
-            name = "mentor_sequence",
-            sequenceName = "mentor_sequence",
+    @SequenceGenerator(
+            name = "univ_sequence",
+            sequenceName = "univ_sequence",
             allocationSize = 1
     )
     @GeneratedValue(
             strategy = GenerationType.SEQUENCE,
-            generator = "mentor_sequence"
+            generator = "univ_sequence"
     )
     @Column(nullable = false)
     private Long id;
