@@ -18,7 +18,7 @@
         <vaadin-spring-boot-starter.version>23.1.0</vaadin-spring-boot-starter.version>
         <com.vaadin-vaadin.version>23.1.0</com.vaadin-vaadin.version>
         <exampledata.version>5.0.1</exampledata.version>
-<!--        <java.version>17</java.version>-->
+        <java.version>17</java.version>
         <vaadin.version>23.1.2</vaadin.version>
         <selenium.version>4.1.2</selenium.version>
     </properties>
