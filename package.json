@@ -1,6 +1,6 @@
 {
-  "name": "no-name",
   "license": "UNLICENSED",
+  "name": "no-name",
   "dependencies": {
     "@polymer/iron-icon": "3.0.1",
     "@polymer/iron-iconset-svg": "3.0.1",
@@ -14,7 +14,7 @@
     "@vaadin/avatar": "23.1.2",
     "@vaadin/avatar-group": "23.1.2",
     "@vaadin/board": "23.1.2",
-    "@vaadin/bundles": "23.1.0",
+    "@vaadin/bundles": "23.1.5",
     "@vaadin/button": "23.1.2",
     "@vaadin/charts": "23.1.2",
     "@vaadin/checkbox": "23.1.2",
@@ -122,30 +122,22 @@
     "lit": "2.2.6"
   },
   "devDependencies": {
+    "@rollup/plugin-node-resolve": "^11.2.0",
+    "@rollup/plugin-replace": "3.1.0",
     "async": "3.2.2",
-    "chokidar": "^3.5.0",
-    "compression-webpack-plugin": "4.0.1",
-    "css-loader": "5.2.7",
-    "esbuild-loader": "2.19.0",
-    "extra-watch-webpack-plugin": "1.0.3",
-    "extract-loader": "5.1.0",
-    "file-loader": "6.2.0",
-    "fork-ts-checker-webpack-plugin": "6.2.1",
     "glob": "7.1.6",
-    "html-webpack-plugin": "4.5.1",
-    "lit-css-loader": "0.1.0",
-    "loader-utils": "2.0.0",
+    "mkdirp": "1.0.4",
+    "rollup-plugin-brotli": "3.1.0",
+    "rollup-plugin-lit-css": "^2.1.0",
+    "rollup-plugin-styles": "^3.14.1",
     "typescript": "4.5.3",
-    "webpack": "4.46.0",
-    "webpack-cli": "4.10.0",
-    "webpack-dev-server": "4.9.2",
-    "webpack-merge": "4.2.2",
+    "vite": "v2.9.1",
+    "vite-plugin-checker": "0.3.4",
+    "workbox-build": "6.5.0",
     "workbox-core": "6.5.0",
-    "workbox-precaching": "6.5.0",
-    "workbox-webpack-plugin": "6.5.0"
+    "workbox-precaching": "6.5.0"
   },
   "overrides": {
-    "chokidar": "$chokidar",
     "@vaadin/bundles": "$@vaadin/bundles",
     "@vaadin/accordion": "$@vaadin/accordion",
     "@vaadin/app-layout": "$@vaadin/app-layout",
@@ -278,7 +270,7 @@
       "@vaadin/avatar": "23.1.2",
       "@vaadin/avatar-group": "23.1.2",
       "@vaadin/board": "23.1.2",
-      "@vaadin/bundles": "23.1.0",
+      "@vaadin/bundles": "23.1.5",
       "@vaadin/button": "23.1.2",
       "@vaadin/charts": "23.1.2",
       "@vaadin/checkbox": "23.1.2",
@@ -385,28 +377,18 @@
       "lit": "2.2.3"
     },
     "devDependencies": {
+      "@rollup/plugin-replace": "3.1.0",
       "async": "3.2.2",
-      "chokidar": "^3.5.0",
-      "compression-webpack-plugin": "4.0.1",
-      "css-loader": "5.2.7",
-      "esbuild-loader": "2.19.0",
-      "extra-watch-webpack-plugin": "1.0.3",
-      "extract-loader": "5.1.0",
-      "file-loader": "6.2.0",
-      "fork-ts-checker-webpack-plugin": "6.2.1",
       "glob": "7.1.6",
-      "html-webpack-plugin": "4.5.1",
-      "lit-css-loader": "0.1.0",
-      "loader-utils": "2.0.0",
+      "mkdirp": "1.0.4",
+      "rollup-plugin-brotli": "3.1.0",
       "typescript": "4.5.3",
-      "webpack": "4.46.0",
-      "webpack-cli": "4.10.0",
-      "webpack-dev-server": "4.9.2",
-      "webpack-merge": "4.2.2",
+      "vite": "v2.9.1",
+      "vite-plugin-checker": "0.3.4",
+      "workbox-build": "6.5.0",
       "workbox-core": "6.5.0",
-      "workbox-precaching": "6.5.0",
-      "workbox-webpack-plugin": "6.5.0"
+      "workbox-precaching": "6.5.0"
     },
-    "hash": "754d50ae8512d1e45738651d20bd1a92774f9f705dd36007c5918e46ee67b909"
+    "hash": "c64afe3f1dc0c268bbb491e58acd7e65768fc8033691c5f7bd4c925de1d3e3c4"
   }
 }

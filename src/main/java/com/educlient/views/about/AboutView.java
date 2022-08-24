@@ -22,7 +22,7 @@ public class AboutView extends VerticalLayout {
         add(img);
 
         add(new H2("EduClient - vaadin ver"));
-        add(new Paragraph("testbed / boilerplates / sandbox"));
+        add(new Paragraph("testbed / boilerplate / sandbox"));
 
         setSizeFull();
         setJustifyContentMode(JustifyContentMode.CENTER);
